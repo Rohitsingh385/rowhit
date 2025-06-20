@@ -1,0 +1,609 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Rohit Kumar - Full Stack Developer</title>
+    <meta name="description" content="Full Stack Developer specializing in backend development, API design, and School ERP systems. Available for freelance projects and remote collaborations.">
+    <meta name="theme-color" content="#3b82f6">
+    
+    <!-- PWA Manifest -->
+    <link rel="manifest" href="manifest.json">
+    
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;500;600;700&family=JetBrains+Mono:wght@400;500;600&display=swap" rel="stylesheet">
+    
+    <!-- Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    
+    <!-- Styles -->
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body class="light-mode">
+    <!-- Navigation -->
+    <nav class="navbar">
+        <div class="nav-container">
+            <div class="nav-logo">
+                <span class="logo-text">RK</span>
+            </div>
+            <div class="nav-links">
+                <a href="#home" class="nav-link">Home</a>
+                <a href="#about" class="nav-link">About</a>
+                <a href="#experience" class="nav-link">Experience</a>
+                <a href="#projects" class="nav-link">Projects</a>
+                <a href="#contact" class="nav-link">Contact</a>
+            </div>
+            <div class="nav-controls">
+                <button class="command-btn" id="commandBtn" title="Command Menu (Ctrl+Enter)">
+                    <i class="fas fa-terminal"></i>
+                </button>
+                <button class="theme-toggle" id="themeToggle" title="Toggle Theme">
+                    <i class="fas fa-sun"></i>
+                </button>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Command Menu Modal -->
+    <div class="command-modal" id="commandModal">
+        <div class="command-content">
+            <div class="command-header">
+                <i class="fas fa-terminal"></i>
+                <span>Command Menu</span>
+                <button class="command-close" id="commandClose">
+                    <i class="fas fa-times"></i>
+                </button>
+            </div>
+            <div class="command-search">
+                <input type="text" id="commandSearch" placeholder="Search commands...">
+            </div>
+            <div class="command-list" id="commandList">
+                <div class="command-item" data-action="download-cv">
+                    <i class="fas fa-download"></i>
+                    <span>Download CV</span>
+                </div>
+                <div class="command-item" data-action="go-projects">
+                    <i class="fas fa-code"></i>
+                    <span>Go to Projects</span>
+                </div>
+                <div class="command-item" data-action="email-me">
+                    <i class="fas fa-envelope"></i>
+                    <span>Email me</span>
+                </div>
+                <div class="command-item" data-action="toggle-theme">
+                    <i class="fas fa-moon"></i>
+                    <span>Toggle Theme</span>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Hero Section -->
+    <section id="home" class="hero">
+        <div class="hero-container">
+            <div class="hero-content">
+                <div class="hero-text">
+                    <h1 class="hero-title">
+                        <span class="greeting">Hi, I'm</span>
+                        <span class="name">Rohit Kumar</span>
+                    </h1>
+                    <p class="hero-subtitle">
+                        <span class="typing-text" id="typingText"></span>
+                        <span class="cursor" id="cursor">|</span>
+                    </p>
+                    <p class="hero-description">
+                        Transforming businesses through powerful digital solutions. 
+                        I build robust ERP systems, integrate payment gateways, and create dynamic websites 
+                        that drive real business growth.
+                    </p>
+                    <div class="hero-buttons">
+                        <a href="#projects" class="btn btn-primary">
+                            <span>View My Work</span>
+                            <i class="fas fa-arrow-right"></i>
+                        </a>
+                        <a href="#contact" class="btn btn-secondary">
+                            <span>Let's Talk</span>
+                            <i class="fas fa-envelope"></i>
+                        </a>
+                    </div>
+                </div>
+                <div class="hero-visual">
+                    <div class="floating-object" id="floatingObject">
+                        <div class="fox-face">
+                            <div class="fox-ears">
+                                <div class="fox-ear left"></div>
+                                <div class="fox-ear right"></div>
+                            </div>
+                            <div class="fox-head">
+                                <div class="fox-whiskers">
+                                    <div class="fox-whisker left-1"></div>
+                                    <div class="fox-whisker left-2"></div>
+                                    <div class="fox-whisker left-3"></div>
+                                    <div class="fox-whisker right-1"></div>
+                                    <div class="fox-whisker right-2"></div>
+                                    <div class="fox-whisker right-3"></div>
+                                </div>
+                                <div class="fox-eyes">
+                                    <div class="fox-eye left">
+                                        <div class="fox-pupil"></div>
+                                    </div>
+                                    <div class="fox-eye right">
+                                        <div class="fox-pupil"></div>
+                                    </div>
+                                </div>
+                                <div class="fox-nose"></div>
+                                <div class="fox-mouth"></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section id="about" class="about">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title">About Me</h2>
+                <div class="section-line"></div>
+            </div>
+            <div class="about-content">
+                <div class="about-text">
+                    <p class="about-description">
+                        I'm a passionate full-stack developer with <strong>1+ years of experience</strong> transforming businesses through innovative digital solutions. 
+                        I specialize in building comprehensive ERP systems, integrating payment gateways, and creating dynamic websites 
+                        that drive real business growth and operational efficiency.
+                    </p>
+                    <p class="about-description">
+                        Currently working as a Software Engineer in the EdTech domain, I help schools and businesses go digital 
+                        with powerful, scalable solutions. From School ERP systems to payroll solutions, payment integrations, 
+                        and dynamic websites for diverse industries - I deliver solutions that make a difference.
+                    </p>
+                    <div class="about-stats">
+                        <div class="stat">
+                            <span class="stat-number">1+</span>
+                            <span class="stat-label">Years Experience</span>
+                        </div>
+                        <div class="stat">
+                            <span class="stat-number">15+</span>
+                            <span class="stat-label">Projects Delivered</span>
+                        </div>
+                        <div class="stat">
+                            <span class="stat-number">20+</span>
+                            <span class="stat-label">Technologies</span>
+                        </div>
+                    </div>
+                    <div class="about-actions">
+                        <a href="#" class="btn btn-primary" id="downloadCv">
+                            <i class="fas fa-download"></i>
+                            <span>Download CV</span>
+                        </a>
+                        <div class="social-links">
+                            <a href="https://github.com/ROHITSlNGH38S" class="social-link" title="GitHub" target="_blank">
+                                <i class="fab fa-github"></i>
+                            </a>
+                            <a href="https://linkedin.com/in/rohiteeee" class="social-link" title="LinkedIn" target="_blank">
+                                <i class="fab fa-linkedin"></i>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Experience Section -->
+    <section id="experience" class="experience">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title">Professional Experience</h2>
+                <div class="section-line"></div>
+            </div>
+            <div class="experience-content">
+                <div class="experience-item" data-aos="fade-up">
+                    <div class="experience-header">
+                        <h3 class="experience-title">Software Engineer</h3>
+                        <span class="experience-company">Leading EdTech Company</span>
+                        <span class="experience-period">2023 - Present</span>
+                    </div>
+                    <div class="experience-description">
+                        <p><strong>Role:</strong> Full-Stack Web Developer (PHP & Node.js)</p>
+                        <ul class="experience-list">
+                            <li><strong>School ERP Development:</strong> Built comprehensive ERP systems for schools including student management, admission, fees, and academic modules</li>
+                            <li><strong>Payroll Solutions:</strong> Developed automated payroll systems with tax calculations, salary processing, and employee management</li>
+                            <li><strong>Payment Gateway Integration:</strong> Successfully integrated Razorpay, CCAvenue, and GetPay for secure online transactions</li>
+                            <li><strong>Dynamic Website Development:</strong> Created responsive websites for prestigious institutions like DAV schools with dynamic admin panels</li>
+                            <li><strong>Multi-Industry Projects:</strong> Built websites for diverse sectors including lighting, spices, coaching centers with custom admin interfaces</li>
+                            <li><strong>System Architecture:</strong> Designed scalable backend systems with RESTful APIs, authentication, and role-based access control</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Skills Section -->
+    <section id="skills" class="skills">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title">Technical Expertise</h2>
+                <div class="section-line"></div>
+            </div>
+            <div class="skills-grid">
+                <div class="skill-category" data-aos="fade-up">
+                    <h3 class="skill-category-title">Core Development</h3>
+                    <div class="skill-tags">
+                        <span class="skill-tag">Node.js</span>
+                        <span class="skill-tag">Express.js</span>
+                        <span class="skill-tag">PHP</span>
+                        <span class="skill-tag">CodeIgniter</span>
+                        <span class="skill-tag">HTML/CSS</span>
+                        <span class="skill-tag">Bootstrap</span>
+                        <span class="skill-tag">JavaScript</span>
+                        <span class="skill-tag">EJS</span>
+                    </div>
+                </div>
+                <div class="skill-category" data-aos="fade-up" data-aos-delay="100">
+                    <h3 class="skill-category-title">Databases & APIs</h3>
+                    <div class="skill-tags">
+                        <span class="skill-tag">MySQL</span>
+                        <span class="skill-tag">MongoDB</span>
+                        <span class="skill-tag">RESTful APIs</span>
+                        <span class="skill-tag">express-session</span>
+                        <span class="skill-tag">Passport.js</span>
+                    </div>
+                </div>
+                <div class="skill-category" data-aos="fade-up" data-aos-delay="200">
+                    <h3 class="skill-category-title">Payment & DevOps</h3>
+                    <div class="skill-tags">
+                        <span class="skill-tag">Razorpay</span>
+                        <span class="skill-tag">CCAvenue</span>
+                        <span class="skill-tag">GetPay</span>
+                        <span class="skill-tag">Docker</span>
+                        <span class="skill-tag">AWS EC2</span>
+                        <span class="skill-tag">Git</span>
+                        <span class="skill-tag">GitHub</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Projects Section -->
+    <section id="projects" class="projects">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title">Featured Projects</h2>
+                <div class="section-line"></div>
+            </div>
+            <div class="projects-grid" id="projectsGrid">
+                <div class="project-card" data-aos="fade-up">
+                    <div class="project-image">
+                        <div class="project-placeholder">
+                            <i class="fas fa-school"></i>
+                        </div>
+                    </div>
+                    <div class="project-content">
+                        <h3 class="project-title">Comprehensive School ERP System</h3>
+                        <p class="project-description">
+                            Built a complete school management system for prestigious institutions including DAV schools. 
+                            Features student management, admission processing, fee collection with payment gateway integration, 
+                            and dynamic admin panels for content management.
+                        </p>
+                        <div class="project-tags">
+                            <span class="tag">PHP</span>
+                            <span class="tag">CodeIgniter</span>
+                            <span class="tag">MySQL</span>
+                            <span class="tag">Razorpay</span>
+                            <span class="tag">Bootstrap</span>
+                        </div>
+                        <div class="project-actions">
+                            <a href="#" class="btn btn-sm btn-primary">
+                                <i class="fas fa-external-link-alt"></i>
+                                <span>Live Demo</span>
+                            </a>
+                            <a href="#" class="btn btn-sm btn-secondary">
+                                <i class="fab fa-github"></i>
+                                <span>Source</span>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="project-card" data-aos="fade-up" data-aos-delay="100">
+                    <div class="project-image">
+                        <div class="project-placeholder">
+                            <i class="fas fa-money-bill-wave"></i>
+                        </div>
+                    </div>
+                    <div class="project-content">
+                        <h3 class="project-title">Automated Payroll System</h3>
+                        <p class="project-description">
+                            Developed a comprehensive payroll solution with automated salary processing, 
+                            tax calculations, employee management, and multiple payment gateway integrations 
+                            including CCAvenue and GetPay for secure transactions.
+                        </p>
+                        <div class="project-tags">
+                            <span class="tag">Node.js</span>
+                            <span class="tag">Express.js</span>
+                            <span class="tag">MongoDB</span>
+                            <span class="tag">CCAvenue</span>
+                            <span class="tag">GetPay</span>
+                        </div>
+                        <div class="project-actions">
+                            <a href="#" class="btn btn-sm btn-primary">
+                                <i class="fas fa-external-link-alt"></i>
+                                <span>Live Demo</span>
+                            </a>
+                            <a href="#" class="btn btn-sm btn-secondary">
+                                <i class="fab fa-github"></i>
+                                <span>Source</span>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="project-card" data-aos="fade-up" data-aos-delay="200">
+                    <div class="project-image">
+                        <div class="project-placeholder">
+                            <i class="fas fa-building"></i>
+                        </div>
+                    </div>
+                    <div class="project-content">
+                        <h3 class="project-title">Multi-Industry Dynamic Websites</h3>
+                        <p class="project-description">
+                            Created responsive, dynamic websites for diverse industries including lighting companies, 
+                            spice manufacturers, and coaching centers. Each project includes custom admin panels 
+                            for easy content management and updates.
+                        </p>
+                        <div class="project-tags">
+                            <span class="tag">PHP</span>
+                            <span class="tag">MySQL</span>
+                            <span class="tag">Bootstrap</span>
+                            <span class="tag">Admin Panel</span>
+                            <span class="tag">Responsive</span>
+                        </div>
+                        <div class="project-actions">
+                            <a href="#" class="btn btn-sm btn-primary">
+                                <i class="fas fa-external-link-alt"></i>
+                                <span>Live Demo</span>
+                            </a>
+                            <a href="#" class="btn btn-sm btn-secondary">
+                                <i class="fab fa-github"></i>
+                                <span>Source</span>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="contact">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title">Ready to Transform Your Business?</h2>
+                <div class="section-line"></div>
+            </div>
+            <div class="contact-content">
+                <div class="contact-info">
+                    <div class="contact-item">
+                        <i class="fas fa-map-marker-alt"></i>
+                        <span>Ranchi, Jharkhand • 834006</span>
+                    </div>
+                    <div class="contact-item">
+                        <i class="fas fa-phone"></i>
+                        <a href="tel:+916206086673" class="contact-link">+91 6206086673</a>
+                    </div>
+                    <div class="contact-item">
+                        <i class="fas fa-envelope"></i>
+                        <a href="mailto:rk301855@gmail.com" class="contact-link">rk301855@gmail.com</a>
+                    </div>
+                    <div class="contact-item">
+                        <i class="fas fa-clock"></i>
+                        <span>Available for remote projects & collaborations</span>
+                    </div>
+                    <div class="contact-item">
+                        <i class="fas fa-check-circle"></i>
+                        <span>Quick response time • Professional delivery</span>
+                    </div>
+                </div>
+                <form class="contact-form" id="contactForm">
+                    <div class="form-group">
+                        <input type="text" id="name" name="name" placeholder="Your Name" required>
+                        <div class="form-border"></div>
+                    </div>
+                    <div class="form-group">
+                        <input type="email" id="email" name="email" placeholder="Your Email" required>
+                        <div class="form-border"></div>
+                    </div>
+                    <div class="form-group">
+                        <textarea id="message" name="message" placeholder="Tell me about your project..." rows="5" required></textarea>
+                        <div class="form-border"></div>
+                    </div>
+                    <button type="submit" class="btn btn-primary btn-full">
+                        <span>Start Your Project</span>
+                        <i class="fas fa-paper-plane"></i>
+                    </button>
+                </form>
+            </div>
+        </div>
+    </section>
+
+    <!-- Cookie Consent Banner -->
+    <div class="cookie-banner" id="cookieBanner">
+        <div class="cookie-content">
+            <div class="cookie-info">
+                <div class="cookie-icon">
+                    <i class="fas fa-shield-alt"></i>
+                </div>
+                <div class="cookie-text">
+                    <h4>We value your privacy</h4>
+                    <p>We use cookies to enhance your browsing experience, analyze site traffic, and personalize content. By continuing to use this site, you consent to our use of cookies.</p>
+                </div>
+            </div>
+            <div class="cookie-actions">
+                <button class="btn btn-sm btn-secondary" id="cookiePreferences">
+                    <i class="fas fa-cog"></i>
+                    <span>Preferences</span>
+                </button>
+                <button class="btn btn-sm btn-primary" id="acceptAllCookies">
+                    <i class="fas fa-check"></i>
+                    <span>Accept All</span>
+                </button>
+            </div>
+        </div>
+    </div>
+
+    <!-- Cookie Preferences Modal -->
+    <div class="cookie-modal" id="cookieModal">
+        <div class="cookie-modal-content">
+            <div class="cookie-modal-header">
+                <h3>Cookie Preferences</h3>
+                <p>Manage your cookie settings to control how we use your data</p>
+                <button class="cookie-modal-close" id="cookieModalClose">
+                    <i class="fas fa-times"></i>
+                </button>
+            </div>
+            <div class="cookie-modal-body">
+                <div class="cookie-category">
+                    <div class="cookie-category-header">
+                        <div class="cookie-category-info">
+                            <h4>Essential Cookies</h4>
+                            <p>Required for the website to function properly. These cannot be disabled.</p>
+                        </div>
+                        <div class="cookie-toggle disabled">
+                            <input type="checkbox" checked disabled>
+                            <span class="toggle-slider"></span>
+                        </div>
+                    </div>
+                    <div class="cookie-category-details">
+                        <span class="cookie-detail">Session management</span>
+                        <span class="cookie-detail">Security features</span>
+                        <span class="cookie-detail">Basic functionality</span>
+                    </div>
+                </div>
+
+                <div class="cookie-category">
+                    <div class="cookie-category-header">
+                        <div class="cookie-category-info">
+                            <h4>Analytics Cookies</h4>
+                            <p>Help us understand how visitors interact with our website by collecting anonymous information.</p>
+                        </div>
+                        <div class="cookie-toggle">
+                            <input type="checkbox" id="analyticsCookies">
+                            <span class="toggle-slider"></span>
+                        </div>
+                    </div>
+                    <div class="cookie-category-details">
+                        <span class="cookie-detail">Page views</span>
+                        <span class="cookie-detail">User behavior</span>
+                        <span class="cookie-detail">Performance metrics</span>
+                    </div>
+                </div>
+
+                <div class="cookie-category">
+                    <div class="cookie-category-header">
+                        <div class="cookie-category-info">
+                            <h4>Functional Cookies</h4>
+                            <p>Enable enhanced functionality and personalization such as theme preferences and language settings.</p>
+                        </div>
+                        <div class="cookie-toggle">
+                            <input type="checkbox" id="functionalCookies">
+                            <span class="toggle-slider"></span>
+                        </div>
+                    </div>
+                    <div class="cookie-category-details">
+                        <span class="cookie-detail">Theme preferences</span>
+                        <span class="cookie-detail">Language settings</span>
+                        <span class="cookie-detail">User preferences</span>
+                    </div>
+                </div>
+
+                <div class="cookie-category">
+                    <div class="cookie-category-header">
+                        <div class="cookie-category-info">
+                            <h4>Marketing Cookies</h4>
+                            <p>Used to track visitors across websites to display relevant and engaging advertisements.</p>
+                        </div>
+                        <div class="cookie-toggle">
+                            <input type="checkbox" id="marketingCookies">
+                            <span class="toggle-slider"></span>
+                        </div>
+                    </div>
+                    <div class="cookie-category-details">
+                        <span class="cookie-detail">Ad targeting</span>
+                        <span class="cookie-detail">Social media integration</span>
+                        <span class="cookie-detail">Marketing analytics</span>
+                    </div>
+                </div>
+            </div>
+            <div class="cookie-modal-footer">
+                <button class="btn btn-secondary" id="rejectAllCookies">
+                    <span>Reject All</span>
+                </button>
+                <button class="btn btn-primary" id="saveCookiePreferences">
+                    <i class="fas fa-save"></i>
+                    <span>Save Preferences</span>
+                </button>
+            </div>
+        </div>
+    </div>
+
+    <!-- Testimonial Chat Bubble -->
+    <div class="testimonial-bubble" id="testimonialBubble">
+        <div class="bubble-dot" id="bubbleDot">
+            <i class="fas fa-comment"></i>
+        </div>
+        <div class="bubble-card" id="bubbleCard">
+            <div class="bubble-header">
+                <div class="testimonial-avatar">
+                    <img src="data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iNDAiIGhlaWdodD0iNDAiIHZpZXdCb3g9IjAgMCA0MCA0MCIgZmlsbD0ibm9uZSIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj4KPGNpcmNsZSBjeD0iMjAiIGN5PSIyMCIgcj0iMjAiIGZpbGw9IiMzYjgyZjYiLz4KPHN2ZyB4PSIxMCIgeT0iMTAiIHdpZHRoPSIyMCIgaGVpZ2h0PSIyMCIgdmlld0JveD0iMCAwIDI0IDI0IiBmaWxsPSJ3aGl0ZSI+CjxwYXRoIGQ9Ik0xMiAyQzYuNDggMiAyIDYuNDggMiAxMnM0LjQ4IDEwIDEwIDEwIDEwLTQuNDggMTAtMTBTMTcuNTIgMiAxMiAyeiIvPgo8cGF0aCBkPSJNMTIgNkM4LjY5IDYgNiA4LjY5IDYgMTJzMi42OSA2IDYgNiA2LTIuNjkgNi02LTIuNjktNi02LTZ6Ii8+Cjwvc3ZnPgo8L3N2Zz4K" alt="Client Avatar" id="testimonialAvatar">
+                </div>
+                <div class="testimonial-info">
+                    <h4 class="testimonial-name" id="testimonialName">Client Name</h4>
+                    <span class="testimonial-role" id="testimonialRole">CEO, Company</span>
+                </div>
+                <button class="bubble-close" id="bubbleClose">
+                    <i class="fas fa-times"></i>
+                </button>
+            </div>
+            <div class="testimonial-content">
+                <p class="testimonial-quote" id="testimonialQuote">
+                    "Rohit delivered an exceptional School ERP system that transformed our entire operations. 
+                    The payment integration works flawlessly!"
+                </p>
+            </div>
+            <div class="bubble-footer">
+                <button class="bubble-next" id="bubbleNext">
+                    <span>Next</span>
+                    <i class="fas fa-chevron-right"></i>
+                </button>
+            </div>
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-text">
+                    <p>&copy; 2024 Rohit Kumar. Built with ❤️ and lots of ☕</p>
+                </div>
+                <div class="footer-links">
+                    <a href="#" class="footer-link">Privacy</a>
+                    <a href="#" class="footer-link">Terms</a>
+                    <a href="#" class="footer-link">Sitemap</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Scripts -->
+    <script src="script.js"></script>
+</body>
+</html> 
