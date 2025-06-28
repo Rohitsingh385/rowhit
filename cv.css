@@ -1,0 +1,182 @@
+.cv-section {
+    padding: 8rem 2rem;
+    background: #f8f9fa;
+    min-height: 100vh;
+    display: block;
+}
+
+.cv-container {
+    max-width: 1000px;
+    margin: 0 auto;
+}
+
+.cv-title {
+    font-size: 3rem;
+    font-weight: 300;
+    margin-bottom: 3rem;
+    text-align: center;
+    animation: fadeInDown 1s ease;
+}
+
+.cv-content {
+    display: flex;
+    flex-direction: column;
+    gap: 3rem;
+}
+
+.cv-section {
+    margin-bottom: 2rem;
+    animation: fadeInUp 1s ease;
+    animation-fill-mode: both;
+}
+
+.cv-section:nth-child(1) {
+    animation-delay: 0.2s;
+}
+
+.cv-section:nth-child(2) {
+    animation-delay: 0.4s;
+}
+
+.cv-section:nth-child(3) {
+    animation-delay: 0.6s;
+}
+
+.cv-section-title {
+    font-size: 1.8rem;
+    font-weight: 500;
+    margin-bottom: 1.5rem;
+    color: #667eea;
+}
+
+.cv-item {
+    margin-bottom: 2rem;
+    padding-left: 1.5rem;
+    border-left: 2px solid #e0e0e0;
+    padding-bottom: 1rem;
+}
+
+.cv-item-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 0.5rem;
+}
+
+.cv-item-header h4 {
+    font-size: 1.3rem;
+    font-weight: 500;
+}
+
+.cv-date {
+    font-size: 0.9rem;
+    color: #666;
+}
+
+.cv-company {
+    font-size: 1.1rem;
+    color: #333;
+    margin-bottom: 0.5rem;
+}
+
+.cv-details {
+    color: #555;
+    padding-left: 1.2rem;
+}
+
+.cv-skills-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 1rem;
+    margin-top: 1.5rem;
+    margin-bottom: 2rem;
+}
+
+.cv-skill-item {
+    background: #fff;
+    padding: 0.8rem 1.2rem;
+    border-radius: 8px;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.05);
+    text-align: center;
+    font-weight: 500;
+    transition: all 0.3s ease;
+    animation: fadeIn 0.5s ease;
+    animation-fill-mode: both;
+}
+
+.cv-skill-item:nth-child(1) { animation-delay: 0.7s; }
+.cv-skill-item:nth-child(2) { animation-delay: 0.8s; }
+.cv-skill-item:nth-child(3) { animation-delay: 0.9s; }
+.cv-skill-item:nth-child(4) { animation-delay: 1.0s; }
+.cv-skill-item:nth-child(5) { animation-delay: 1.1s; }
+.cv-skill-item:nth-child(6) { animation-delay: 1.2s; }
+.cv-skill-item:nth-child(7) { animation-delay: 1.3s; }
+.cv-skill-item:nth-child(8) { animation-delay: 1.4s; }
+
+.cv-skill-item:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+    color: #667eea;
+}
+
+.cv-download {
+    text-align: center;
+    margin-top: 2rem;
+    animation: fadeInUp 1s ease;
+    animation-delay: 1.5s;
+    animation-fill-mode: both;
+}
+
+.cv-download-btn {
+    display: inline-block;
+    background: #667eea;
+    color: white;
+    padding: 1rem 2rem;
+    border-radius: 30px;
+    text-decoration: none;
+    font-weight: 500;
+    transition: all 0.3s ease;
+    box-shadow: 0 4px 12px rgba(102, 126, 234, 0.3);
+}
+
+.cv-download-btn:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 6px 18px rgba(102, 126, 234, 0.4);
+}
+
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translateY(30px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes fadeInDown {
+    from {
+        opacity: 0;
+        transform: translateY(-30px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+@media (max-width: 768px) {
+    .cv-skills-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
