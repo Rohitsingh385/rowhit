@@ -191,8 +191,11 @@ function initHeroAnimation() {
         const span = document.createElement('span');
         span.className = 'hero-word';
         span.style.color = '#999999'; // Ensure all text starts as grey
-        span.innerHTML = word + (index < words.length - 1 ? ' ' : '');
+        span.textContent = word;
         heroIntro.appendChild(span);
+        if (index < words.length - 1) {
+            heroIntro.appendChild(document.createTextNode(' '));
+        }
     });
     
     // Get all word spans
